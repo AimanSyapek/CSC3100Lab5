@@ -178,7 +178,7 @@ public class MuhdAimanSyafiq_lab06String {
             case 16:
             System.out.println("Putrajaya");
             break;
-            case 82:
+            default:
             System.out.println("Unknown");
             break;
         }
