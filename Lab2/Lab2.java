@@ -1,6 +1,4 @@
 package Lab2;
-import static java.lang.System.out;
-
 import java.util.Scanner;
 
 public class Lab2 {
