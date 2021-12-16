@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner.*;
+
+public class exchp6p69 {
+    public static void main(String[] args) throws Exception {
+        String fname="studentscore.dat";
+        // Create a File instance
+        File file = new File(fname);
+        if(!file.exists()){
+        System.out.println("File "+fname+" not exists");
+        System.exit(0);
+        }
+        // Create a file
+        Scanner input=new Scanner(file);
+        input.useDelimiter(":");
+        // Read data from a file
+        String name = input.next();
+        String phone= input.next();
+        System.out.printf("%-15s %-15s",name,phone);
+        input.close();
+        
+    }
+    
+}
