@@ -36,36 +36,37 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
         System.out.println(""); 
 
         //Task A
-        offset = 0;
+        //Declaration
+        offset = 0; //Reset offset
         String pension;
         int mainincome = 0, age2;
-        int young = Integer.parseInt(records.get(offset+3));
-        int old = Integer.parseInt(records.get(offset+3));
+        int ageYoung = Integer.parseInt(records.get(offset+3));
+        int ageOld = Integer.parseInt(records.get(offset+3));
         String youngest = "";
         String oldest = "";
         String state2;
         List<String> notPayed = new ArrayList<String>();
         List<String> selangorianOverpaid = new ArrayList<String>();
-        for (int i=1; i <= 24; i++){
+        for (int i=1; i <= 24; i++){ //rea
             name = records.get(offset+1); 
             state2 = records.get(offset+2);
             age2 = Integer.parseInt(records.get(offset+3));
             mainincome = Integer.parseInt(records.get(offset+4));
             pension = records.get(offset+6);
             if (age2>=56 && (pension.startsWith("0"))){
-                notPayed.add(name);
+                notPayed.add(name); //append current name to list
             }
 
             if (mainincome >= 4500 && state2.contains("Selangor")){ //Selangorians that are overpaid
-                selangorianOverpaid.add(name);
+                selangorianOverpaid.add(name); //append current name to list
             }
 
-            if (age2<= young) { //keeps youngest
-                young = age2;
-                youngest = name;
+            if (age2<= ageYoung) { //cycles, compare youngest age and saving name for later
+                ageYoung = age2;
+                youngest = name; 
             }
-            if (age2 >= old) { //keeps oldest
-                old = age2;
+            if (age2 >= ageOld) { //cycles, compare oldest age and saving name for later
+                ageOld = age2;
                 oldest = name;
             }
             offset = offset + 7;
@@ -81,12 +82,12 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
             System.out.println(selangorianOverpaid.get(i));
         }
         //Question 3
-        System.out.println("\n\nThe yougest person in Putrajaya is " + youngest);
-        System.out.println("The oldest person in Putrajaya is " + oldest);
+        System.out.println("\n\nThe yougest person in Putrajaya is " + youngest + " which is " + ageYoung + " years old.");
+        System.out.println("The oldest person in Putrajaya is " + oldest+ " which is " + ageOld + " years old.");
 
         //Task B
         //Question 1
-        offset = 0;
+        offset = 0; //Reset offset
         int summation = 0;
         int numPeople = 0;
         for (int i=1; i <= 24; i++){
@@ -98,10 +99,10 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
             }
             offset += 7;
         }
-        System.out.println("\n\nIt takes " + numPeople + " to read before their combine sum of their income reaches RM200 000,\nor accurately their sum will be " + summation + "\n\n");
+        System.out.println("\n\nIt takes " + numPeople + " to read before their combine sum of their income reaches more than RM200 000,\nor more accurately their sum will be RM" + summation + ". \n\n");
 
         //Question 2
-        offset = 0;
+        offset = 0; //Reset offset
         numPeople = 0;
         String nameStartsN = ""; 
         for (int i=1; i <= 24; i++){
