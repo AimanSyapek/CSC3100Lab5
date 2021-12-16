@@ -37,7 +37,8 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
 
         //Task A
         offset = 0;
-        int pension = 0, mainincome = 0, age2;
+        String pension;
+        int mainincome = 0, age2;
         int young = Integer.parseInt(records.get(offset+3));
         int old = Integer.parseInt(records.get(offset+3));
         String youngest = "";
@@ -50,8 +51,8 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
             state2 = records.get(offset+2);
             age2 = Integer.parseInt(records.get(offset+3));
             mainincome = Integer.parseInt(records.get(offset+4));
-            //pension = Integer.parseInt(records.get(offset+6));
-            if (age2>=56 && pension == 0){
+            pension = records.get(offset+6);
+            if (age2>=56 && (pension.startsWith("0"))){
                 notPayed.add(name);
             }
 
@@ -97,7 +98,7 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
             }
             offset += 7;
         }
-        System.out.println("It takes " + numPeople + " to read before their combine sum of their income reaches RM200 000,\nor accurately their sum will be " + summation + "\n\n");
+        System.out.println("\n\nIt takes " + numPeople + " to read before their combine sum of their income reaches RM200 000,\nor accurately their sum will be " + summation + "\n\n");
 
         //Question 2
         offset = 0;
@@ -114,4 +115,4 @@ public class MuhdAimanSyafiq_lab08WhileLoop{
         }
         System.out.println("It takes " + numPeople + " before finding someone whose name begins with the letter N who is " + nameStartsN + "\n\n");
     }
-}-
+}
