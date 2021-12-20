@@ -1,3 +1,5 @@
+package Lab8;
+
 import java.io.File; import java.util.ArrayList; import java.util.List; import java.util.Scanner;
 
 public class MuhdAimanSyafiq_lab08WhileLoop{

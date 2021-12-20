@@ -7,7 +7,6 @@ public class MuhdAimanSyafiq_lab4_coffee4 {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Please input the number of bags: ");
 		int numBag = input.nextInt();
-		int remainingBag = numBag / 10;
 		int extraBag = numBag %10;
 		
 		if ((extraBag != 0) || (numBag < 0)) {
